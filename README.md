@@ -61,6 +61,6 @@ To check if a credit card number is valid or not (example)
 
 ## Author
 
-Andrés Sotelo | Software Developer 
+Andrés Sotelo | Software Developer | Backend 
 - [LinkedIn] (https://www.linkedin.com/in/andresotelo/)
 Bogotá | Colombia
