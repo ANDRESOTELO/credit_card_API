@@ -8,7 +8,8 @@ For the backend:
 - Git
 - Docker
 
-## Virtual environment
+## To run application in console
+### Virtual environment
 To install virtualenv
 ```bash
 sudo pip3 install virtualenv
@@ -24,40 +25,58 @@ Activate vitual environment
 ## Virtual environment Configuration
 Please run:
 
-    (venv)$ pip3 install -r requirements.txt
+    (env)$ pip3 install -r requirements.txt
 
 Now we have to create environment variables
 
-    (venv)$ export FLASK_APP=api.v1.app.py
-    (venv)$ export FLASK_DEBUG=1
-    (venv)$ export FLASK_ENV=development
+    (env)$ export FLASK_DEBUG=1
+    (env)$ export FLASK_ENV=development
 
 ## Run server
 
 To run server:
 
-    (venv)$ python3 -m api.v1.app
- 
+    (env)$ python3 -m api.v1.app
  
 
+## Docker image
+To pull docker container
+```bash
+docker pull andresotelo/creditcard_v1
+```
+To run docker container
+```bash
+docker run -p 5000:5000 creditcard_v1
+```
 ## Interact with the App
 
-To check the API status when server is running
+Please open other terminal an run
 
-> http://localhost:5001/card_validator/api/v1.0/status
+To check the API status when server is running
+```bash
+curl http://localhost:5001/card_validator/api/v1.0/status
+```
 
 To retrieve all cards information
+```bash
+curl http://localhost:5001/card_validator/api/v1.0/cards 
+```
 
-> http://localhost:5001/card_validator/api/v1.0/cards 
- 
 To retrieve a brand information
-> http://localhost:5001/card_validator/api/v1.0/cards/visa
-> http://localhost:5001/card_validator/api/v1.0/cards/mastercard
+
+```bash
+curl http://localhost:5001/card_validator/api/v1.0/cards/visa
+```
+
+```bash
+curl http://localhost:5001/card_validator/api/v1.0/cards/mastercard
+```
 
 To check if a credit card number is valid or not (example)
 
-> http://localhost:5001/card_validator/api/v1.0/cards/validate/377813010522325
-
+```bash
+curl http://localhost:5001/card_validator/api/v1.0/cards/validate/377813010522325
+```
 
 ## Author
 
