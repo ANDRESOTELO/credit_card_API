@@ -1,5 +1,5 @@
-# Whale & Jaguar Backend Test
-For this technical test, I have been asked to create a web application with which the user can interact and validate if a credit card number is valid or not
+# Credit card number validator API
+I have been asked to create a web application with which the user can interact and validate if a credit card number is valid or not
 
 # Technologies and tools
 For the backend:
